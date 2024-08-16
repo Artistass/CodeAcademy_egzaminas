@@ -1,0 +1,75 @@
+/* Footer.module.css */
+.footer {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  padding: 40px 20px;
+  text-align: left;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  border-top: 3px solid black;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 8rem;
+}
+
+.logoImage{
+  width: 150px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.linkSoc {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.linkSoc {
+  color: #ffffff;
+}
+
+
+.bottom {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}

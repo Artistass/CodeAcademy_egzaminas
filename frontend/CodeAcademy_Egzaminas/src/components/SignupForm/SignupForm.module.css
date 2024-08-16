@@ -1,0 +1,83 @@
+.signupContainer {
+  color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.header {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+}
+
+.label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.input:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #444;
+  color: #e0e0e0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #888;
+}
+
+.successMessage {
+  color: #4caf50;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.successMessageSpan {
+  font-size: 1.5rem;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+}

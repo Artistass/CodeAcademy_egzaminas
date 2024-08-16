@@ -1,0 +1,52 @@
+/* WrongEndPoint.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: #3c3c3c;
+}
+
+.errorCode {
+  font-size: 6rem;
+  margin: 0;
+  color: #a44848;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.emoji {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.homeButton {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color:#a44848;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.homeButton:hover {
+  background-color: #803c3c;
+}

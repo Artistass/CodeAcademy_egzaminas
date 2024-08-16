@@ -1,0 +1,170 @@
+/* Header */
+.container {
+  background-image: url("../../Images/HomePage/Colage-horz.jpg");
+  width: 100%;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+}
+
+.headerContainer {
+  background-image: url("../../Images/HomePage/nissangtr34.jpg");
+  width: 100%;
+  height: 50vh;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+  border-bottom: 5px solid black;
+  border-top: 3px solid black;
+}
+
+.textContainer {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 30px;
+}
+
+.textHeader {
+  padding: 2rem;
+  letter-spacing: 10px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.textInfo {
+  width: 50%;
+  margin: auto;
+  line-height: 40px;
+}
+/* Main */
+
+.mainContainer {
+  background-color: #181818de;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.mainText {
+  color: white;
+  padding: 3rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 50px;
+}
+
+.textBlockImage {
+  width: 300px;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
+.firstTextBlock {
+  background-image: linear-gradient(
+    to top,
+    rgba(95, 94, 161, 0.6) 0%,
+    rgba(81, 81, 138, 0.6) 52%,
+    rgba(88, 88, 147, 0.6) 100%
+  );
+  /* Adjust the alpha value (0.7) to make it more or less transparent */
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.secondTextBlock {
+  background-image: linear-gradient(
+    to top,
+    rgba(55, 55, 109, 0.6) 0%,
+    rgba(55, 55, 100, 0.6) 52%,
+    rgba(53, 53, 99, 0.6) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.mainTextInfoLeft {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  width: 50%;
+  margin-left: 50px;
+}
+
+.mainTextInfoRight {
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: right;
+  width: 50%;
+  margin-right: 50px;
+}
+
+.spanText {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Secondary Main */
+
+.secondaryMainHeaderText {
+  color: white;
+  margin: 50px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.secondaryMainContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+  gap: 20px; /* Space between each grid item */
+  padding: 20px; /* Padding around the grid container */
+  padding-bottom: 2rem;
+}
+
+.buttonContainer {
+  text-align: center; /* Centers the title and button within each grid item */
+}
+
+.buttonTitle {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.buttonReisbrennen,
+.buttonBmwSyndikat {
+  width: 100%;
+  padding: 100px;
+  background-size: cover; /* Ensures the image covers the entire button area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+  border: none; /* Removes any default border */
+  border-radius: 8px; /* Optional: Rounds the corners of the button */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.buttonReisbrennen:hover,
+.buttonBmwSyndikat:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for a pop-out effect */
+}
+
+.buttonBmwSyndikat {
+  background-image: url("../../Images/HomePage/BMW-Syndikat-Asphaltfieber-auf-dem-Fluplatz-Obermehler-qiod.jpg");
+}
+
+.buttonReisbrennen {
+  background-image: url("../../Images/HomePage/ReisBrennen.png");
+}

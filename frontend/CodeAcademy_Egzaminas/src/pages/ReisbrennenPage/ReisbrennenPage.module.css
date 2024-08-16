@@ -1,0 +1,164 @@
+.backgroundContainer {
+  background-image: url("../../Images/HomePage/Colage-horz.jpg");
+  width: 100%;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+}
+
+.headerContainer {
+  background-image: url("../../Images/ReisBrennenPage/ReisbrennenHeader.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
+  border-bottom: 5px solid black;
+  border-top: 3px solid black;
+}
+
+.headerText {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 70px;
+  letter-spacing: 10px;
+  padding-top: 5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    /* Soft white glow */ 0 0 20px rgba(255, 255, 255, 0.5),
+    /* Brighter white glow */ 0 0 30px rgba(17, 0, 255, 0.7),
+    /* Magenta glow */ 0 0 40px rgba(17, 0, 255, 0.6),
+    /* Stronger magenta glow */ 0 0 50px rgba(17, 0, 255, 0.5),
+    /* Even stronger magenta */ 0 0 60px rgba(17, 0, 255, 0.4); /* Fading out magenta glow */
+}
+
+/* Main */
+
+.mainContainer {
+  background-color: #181818de;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.mainText {
+  color: white;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding: 50px;
+}
+
+.eventStartText {
+  color: white;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Activities */
+
+.activitiesContainer {
+  color: white;
+  background-color: #2571fe6f;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  border-radius: 10px;
+}
+
+.activitiesTitle {
+  margin: 2rem;
+  font-size: 50px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+}
+
+.activitiesText {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Ticket */
+
+.ticketPricesTitle {
+  margin: 2rem;
+}
+
+.ticketTitle {
+  text-align: left;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.ticketText {
+  text-align: left;
+  font-size: 18px;
+  margin-left: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Gallery */
+
+.galleryTitle {
+  color: white;
+  margin: 2rem;
+  font-size: 50px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Space between images */
+  width: 80%;
+  margin: auto;
+}
+
+.gallery_item {
+  flex: 1 1 calc(33.333% - 10px); /* Adjusts the size of the images */
+  box-sizing: border-box;
+}
+
+.gallery_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* After Gallery (dont miss out) */
+
+.dontMissOut {
+  color: white;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  letter-spacing: 1px;
+}
+
+/* Back button */
+
+.backButton {
+  padding: 0.8rem 4rem;
+  margin-bottom: 2rem;
+  background-color: #444;
+  color: #e0e0e0;
+  border: 2px solid #555;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.backButton:hover {
+  background-color: #555;
+  border-color: #666;
+}
