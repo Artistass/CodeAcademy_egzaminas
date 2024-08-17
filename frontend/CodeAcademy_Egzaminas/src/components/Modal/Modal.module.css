@@ -1,15 +1,14 @@
-/* Modal.module.css */
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensures the modal is on top */
+  z-index: 1000;
 }
 
 .modal {
@@ -23,7 +22,7 @@
 
 .modalHeader {
   display: flex;
-  justify-content: flex-end; /* Positions the close button to the right */
+  justify-content: flex-end;
 }
 
 .closeButton {
@@ -34,5 +33,5 @@
 }
 
 .modalContent {
-  padding-top: 10px; /* Add padding to separate content from the close button */
+  padding-top: 10px;
 }

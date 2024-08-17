@@ -6,9 +6,12 @@ import FetchRegistrations from "../../hooks/FetchRegistrations/FetchRegistration
 import styles from "./RegistrationTable.module.css";
 
 export default function RegistrationTable() {
+  // Fetch registrations ir sarasui atnaujinti
   const [registrations, fetchRegistrations] = FetchRegistrations();
+  // UseState kontroliuoti modalus
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
+  // Būsena, kad galėtumėte sekti šiuo metu pasirinktą registraciją, kurią norite delete or update
   const [selectedRegistration, setSelectedRegistration] = useState(null);
 
   const handleDeleteClick = (registration) => {
@@ -38,6 +41,7 @@ export default function RegistrationTable() {
   const handleUpdate = () => {
     fetchRegistrations(); // Refresh the list after updating
   };
+
   //
 
   const [showForm, setShowForm] = useState(false);

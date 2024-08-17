@@ -2,8 +2,8 @@
 .container {
   background-image: url("../../Images/HomePage/Colage-horz.jpg");
   width: 100%;
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -11,8 +11,8 @@
   background-image: url("../../Images/HomePage/nissangtr34.jpg");
   width: 100%;
   height: 50vh;
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-bottom: 5px solid black;
   border-top: 3px solid black;
@@ -66,7 +66,6 @@
     rgba(81, 81, 138, 0.6) 52%,
     rgba(88, 88, 147, 0.6) 100%
   );
-  /* Adjust the alpha value (0.7) to make it more or less transparent */
 
   display: flex;
   align-items: center;
@@ -125,14 +124,14 @@
 
 .secondaryMainContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
-  gap: 20px; /* Space between each grid item */
-  padding: 20px; /* Padding around the grid container */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
   padding-bottom: 2rem;
 }
 
 .buttonContainer {
-  text-align: center; /* Centers the title and button within each grid item */
+  text-align: center;
 }
 
 .buttonTitle {
@@ -146,19 +145,19 @@
 .buttonBmwSyndikat {
   width: 100%;
   padding: 100px;
-  background-size: cover; /* Ensures the image covers the entire button area */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  border: none; /* Removes any default border */
-  border-radius: 8px; /* Optional: Rounds the corners of the button */
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buttonReisbrennen:hover,
 .buttonBmwSyndikat:hover {
-  transform: scale(1.05); /* Slightly enlarge the button */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for a pop-out effect */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .buttonBmwSyndikat {

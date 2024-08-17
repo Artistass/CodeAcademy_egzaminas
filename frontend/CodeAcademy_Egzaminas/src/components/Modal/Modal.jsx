@@ -8,9 +8,7 @@ export default function Modal({ show, children }) {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
-        <div className={styles.modalContent}>
-          {children}
-        </div>
+        <div className={styles.modalContent}>{children}</div>
       </div>
     </div>
   );

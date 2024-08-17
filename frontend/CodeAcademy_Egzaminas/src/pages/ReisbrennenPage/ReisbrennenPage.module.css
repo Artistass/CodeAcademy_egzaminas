@@ -1,8 +1,8 @@
 .backgroundContainer {
   background-image: url("../../Images/HomePage/Colage-horz.jpg");
   width: 100%;
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -10,8 +10,8 @@
   background-image: url("../../Images/ReisBrennenPage/ReisbrennenHeader.jpg");
   width: 100%;
   height: 40vh;
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-bottom: 5px solid black;
   border-top: 3px solid black;
@@ -25,11 +25,9 @@
   letter-spacing: 10px;
   padding-top: 5rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
-    /* Soft white glow */ 0 0 20px rgba(255, 255, 255, 0.5),
-    /* Brighter white glow */ 0 0 30px rgba(17, 0, 255, 0.7),
-    /* Magenta glow */ 0 0 40px rgba(17, 0, 255, 0.6),
-    /* Stronger magenta glow */ 0 0 50px rgba(17, 0, 255, 0.5),
-    /* Even stronger magenta */ 0 0 60px rgba(17, 0, 255, 0.4); /* Fading out magenta glow */
+    0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(17, 0, 255, 0.7),
+    0 0 40px rgba(17, 0, 255, 0.6), 0 0 50px rgba(17, 0, 255, 0.5),
+    0 0 60px rgba(17, 0, 255, 0.4);
 }
 
 /* Main */
@@ -114,13 +112,13 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Space between images */
+  gap: 10px;
   width: 80%;
   margin: auto;
 }
 
 .gallery_item {
-  flex: 1 1 calc(33.333% - 10px); /* Adjusts the size of the images */
+  flex: 1 1 calc(33.333% - 10px);
   box-sizing: border-box;
 }
 

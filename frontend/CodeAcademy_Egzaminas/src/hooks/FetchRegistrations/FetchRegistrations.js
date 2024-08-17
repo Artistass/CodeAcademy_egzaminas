@@ -10,14 +10,15 @@ export default function FetchRegistrations() {
     try {
       const response = await axios.get(`${API_URL}/registration`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`, // Pasijema tokena del auth
         },
       });
       setRegistrations(response.data);
     } catch (err) {
+      // Tikrina ar tokenas yra ir dar yra validus "1h"
       if (err.response && err.response.status === 403) {
+        // Istrina tokena is localStorage jeigu nera priejimo
         localStorage.removeItem("token");
-        
       } else {
         alert("Something went wrong");
       }
@@ -28,5 +29,6 @@ export default function FetchRegistrations() {
     fetchRegistrations();
   }, [fetchRegistrations]);
 
+  // Graziname registracijos data ir funkcija re-fetch
   return [registrations, fetchRegistrations];
 }

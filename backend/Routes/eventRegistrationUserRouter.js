@@ -6,7 +6,7 @@ import { validateJwt } from "../Middleware/validateJwtMiddleware.js";
 
 const router = express.Router();
 
-router.get("/", validateJwt ,getRegistrations);
+router.get("/", validateJwt, getRegistrations);
 router.post("/", validateRegistrationBody ,createNewRegistration);
 router.put("/:id", validateIdParam ,validateRegistrationBody ,updateRegistration);
 router.delete("/:id", validateIdParam ,deleteRegistration);

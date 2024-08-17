@@ -56,12 +56,6 @@ export default function BmwSyndikatAsphaltfieberPage() {
             accessories, tuning services, and BMW-related merchandise.
           </h4>
 
-          <h1 className={styles.activitiesTitle}>Entertainment</h1>
-          <h4 className={styles.activitiesText}>
-            The event also includes live music, parties, and other forms of
-            entertainment, making it more than just a car show.
-          </h4>
-
           <h1 className={styles.activitiesTitle}>Awards</h1>
           <h4 className={styles.activitiesText}>
             The event typically concludes with awards for various categories,

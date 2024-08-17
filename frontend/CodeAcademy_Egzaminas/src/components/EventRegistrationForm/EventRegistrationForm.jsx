@@ -18,6 +18,8 @@ export default function EventRegistrationForm({ onSubmit, onClose }) {
 
     if (!firstName.value) {
       newErrors.firstName = "First Name is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(firstName.value)) {
+      newErrors.firstName = "Name must only contain letters and numbers.";
     } else if (firstName.value.length < 2) {
       newErrors.firstName = "First Name must be at least 2 characters.";
     } else if (firstName.value.length > 20) {
@@ -26,6 +28,8 @@ export default function EventRegistrationForm({ onSubmit, onClose }) {
 
     if (!lastName.value) {
       newErrors.lastName = "Last Name is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(lastName.value)) {
+      newErrors.lastName = "Name must only contain letters and numbers.";
     } else if (lastName.value.length < 2) {
       newErrors.lastName = "Last Name must be at least 2 characters.";
     } else if (lastName.value.length > 20) {
@@ -52,17 +56,20 @@ export default function EventRegistrationForm({ onSubmit, onClose }) {
 
   async function createNewRegistration() {
     if (!validate()) return;
+
+    const body = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      age: age.value,
+    };
+
     try {
-      await axios.post(`${API_URL}/registration`, {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        email: email.value,
-        age: age.value,
-      });
-      
-      onSubmit(); // Trigger onSubmit to notify parent component
+      await axios.post(`${API_URL}/registration`, body);
+
+      onSubmit();
     } catch (error) {
-      alert(error.message); // Handle any errors
+      alert(error.message);
     }
   }
 
@@ -124,18 +131,18 @@ export default function EventRegistrationForm({ onSubmit, onClose }) {
       {errors.age && <p className={styles.error}>{errors.age}</p>}
       <br />
 
-     <div className={styles.buttonContainer}>
-      <button
-        type="button"
-        onClick={createNewRegistration}
-        className={styles.button}
-      >
-        Register
-      </button>
-      <button type="button" onClick={onClose} className={styles.button}>
-        Cancel
-      </button>
-     </div>
+      <div className={styles.buttonContainer}>
+        <button
+          type="button"
+          onClick={createNewRegistration}
+          className={styles.button}
+        >
+          Register
+        </button>
+        <button type="button" onClick={onClose} className={styles.button}>
+          Cancel
+        </button>
+      </div>
     </form>
   );
 }

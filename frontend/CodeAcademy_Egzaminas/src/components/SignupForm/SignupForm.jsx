@@ -13,25 +13,31 @@ export default function SignupForm({ onSignupSuccess, onClose }) {
   const [signupSuccessful, setSignupSuccessful] = useState(false);
 
   function validate() {
-    const newErrors = {};
-    if (name.value === "") {
+    const newErrors = {}; // Objektas tam kad jei butu daugiau nei vienas err.
+    if (!name.value) {
       newErrors.name = "Name is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(name.value)) {
+      newErrors.name = "Name must only contain letters and numbers.";
     } else if (name.value.length < 2) {
       newErrors.name = "Name must be at least 2 characters.";
+    } else if (name.value.length > 20) {
+      newErrors.name = "Name must not exceed 20 characters.";
     }
 
-    if (password.value === "") {
+    if (!password.value) {
       newErrors.password = "Password is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(password.value)) {
+      newErrors.password = "Password must only contain letters and numbers.";
     } else if (password.value.length < 8) {
       newErrors.password = "Name must be at least 8 characters long.";
     }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    setErrors(newErrors); // Update the errors state with validation errors
+    return Object.keys(newErrors).length === 0; // Return true if there are no errors
   }
 
   async function handleSignup(e) {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate()) return; // Validate inputs and exit if there are errors
 
     const body = {
       name: name.value,
@@ -93,7 +99,7 @@ export default function SignupForm({ onSignupSuccess, onClose }) {
       </form>
       {signupSuccessful && (
         <p className={styles.successMessage}>
-          <span className={styles.successMessageSpan}>Signup successful!</span>{" "}
+          <span className={styles.successMessageSpan}>Signup successful!</span>
           <br /> You will soon be redirected to the login form.
         </p>
       )}

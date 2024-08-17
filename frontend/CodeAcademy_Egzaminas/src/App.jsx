@@ -32,9 +32,9 @@ function App() {
             </AuthProtection>
           }
         />
-        <Route path="*" element={<WrongEndPoint/>}/>
+        <Route path="*" element={<WrongEndPoint />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

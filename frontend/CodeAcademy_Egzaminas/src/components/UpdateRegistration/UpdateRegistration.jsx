@@ -23,6 +23,8 @@ export default function UpdateRegistration({
 
     if (!firstName.value) {
       newErrors.firstName = "First Name is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(firstName.value)) {
+      newErrors.firstName = "Name must only contain letters and numbers.";
     } else if (firstName.value.length < 2) {
       newErrors.firstName = "First Name must be at least 2 characters.";
     } else if (firstName.value.length > 20) {
@@ -31,6 +33,8 @@ export default function UpdateRegistration({
 
     if (!lastName.value) {
       newErrors.lastName = "Last Name is required.";
+    } else if (!/^[a-zA-Z0-9]+$/.test(lastName.value)) {
+      newErrors.lastName = "Name must only contain letters and numbers.";
     } else if (lastName.value.length < 2) {
       newErrors.lastName = "Last Name must be at least 2 characters.";
     } else if (lastName.value.length > 20) {
@@ -57,13 +61,16 @@ export default function UpdateRegistration({
 
   async function handleUpdate() {
     if (!validate()) return;
+
+    const body = {
+      firstName: firstName.value,
+      lastName: lastName.value,
+      email: email.value,
+      age: age.value,
+    };
+
     try {
-      await axios.put(`${API_URL}/registration/${registration._id}`, {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        email: email.value,
-        age: age.value,
-      });
+      await axios.put(`${API_URL}/registration/${registration._id}`, body);
       onUpdate();
       onClose();
     } catch (error) {
@@ -73,6 +80,12 @@ export default function UpdateRegistration({
 
   return (
     <Modal show={!!registration} onClose={onClose}>
+      {/* 
+    We use !!registration to explicitly convert the registration object into a boolean.
+    - If registration is truthy (e.g., an object), !!registration will evaluate to true, showing the modal.
+    - If registration is falsy (e.g., null or undefined), !!registration will evaluate to false, hiding the modal.
+    This ensures that the show prop is always a boolean, making the code more predictable and clear.
+  */}
       <h2 className={styles.header}>Update Registration</h2>
       <form className={styles.form}>
         <label htmlFor="firstName" className={styles.label}>

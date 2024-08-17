@@ -9,6 +9,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 export default function SigninForm({ onSigninSuccess, onClose }) {
   const name = AddInput("");
   const password = AddInput("");
+
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -22,12 +23,12 @@ export default function SigninForm({ onSigninSuccess, onClose }) {
 
     try {
       const response = await axios.post(API_URL + "/login", body);
-      const token = response.data.token;
+      const token = response.data.token; //Pasijamam tokena
 
       if (token) {
-        localStorage.setItem("token", token); // Save the token in localStorage
+        localStorage.setItem("token", token); // Issaugojame tokena i localStorage
         if (onSigninSuccess) onSigninSuccess();
-        navigate("/"); // Navigate to the home page or wherever appropriate
+        navigate("/");
       } else {
         alert("Failed to receive token.");
       }
@@ -45,7 +46,7 @@ export default function SigninForm({ onSigninSuccess, onClose }) {
       <h2 className={styles.header}>Login</h2>
       <form onSubmit={handleSignin} className={styles.form}>
         <label htmlFor="name" className={styles.label}>
-          Name:{" "}
+          Name:
         </label>
         <input
           type="text"
@@ -59,7 +60,7 @@ export default function SigninForm({ onSigninSuccess, onClose }) {
           required
         />
         <label htmlFor="password" className={styles.label}>
-          Password:{" "}
+          Password:
         </label>
         <input
           type="password"
